@@ -23,7 +23,7 @@ st.set_page_config(page_title=" Netflix Data Dashboard", layout="wide")
 # ===============================
 @st.cache_data
 def load_data():
-    df = pd.read_csv(r"C:\Users\Arjun\OneDrive\Desktop\Netflix_Dashboard\netflix_titles.csv.csv")
+    df = pd.read_csv(r"C:\Users\Arjun\OneDrive\Desktop\Netflix_Dashboard\netflix_titles.csv")
 
     # Remove duplicates
     df.drop_duplicates(inplace=True)
@@ -193,4 +193,5 @@ with tab3:
     """)
 
 st.success("✅ Dashboard and ML Models Loaded Successfully!")
+
 
