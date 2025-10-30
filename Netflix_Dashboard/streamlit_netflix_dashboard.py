@@ -8,6 +8,14 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score
 
+try:
+    import matplotlib.pyplot as plt
+except ModuleNotFoundError:
+    import os
+    os.system("pip install matplotlib")
+    import matplotlib.pyplot as plt
+
+
 st.set_page_config(page_title=" Netflix Data Dashboard", layout="wide")
 
 # ===============================
@@ -185,3 +193,4 @@ with tab3:
     """)
 
 st.success("✅ Dashboard and ML Models Loaded Successfully!")
+
